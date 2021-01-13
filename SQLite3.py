@@ -17,8 +17,14 @@ try:
 	)
 	""")
 	db.commit()
-	db.close()
+	
 	print('Database Connection Successfull')
+	
+	c.execute("INSERT INTO balances(Reg_No,First_Name,Second_Name,Section,Class,Term,Year,Balance) VALUES (?,?,?,?,?,?,?,?)",('ivan','23','male','developer','540',))
+	c.commit()
+	db.close()
+		  
+
 
 except Exception as e:
 	print(e) #this prints out the error if there is any
