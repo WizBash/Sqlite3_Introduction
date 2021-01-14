@@ -30,7 +30,12 @@ try:
 	for row in rows:
 		  print(row) #prints out data to the console
 	db.close()  
-
+	#=============================another selection option data from our database table=====================
+	c.execute("SELECT * FORM info_table WHERE name = 'ivan')
+	rows = c.fetchall()
+	for row in rows:
+		  print(row) #prints out data to the console
+	db.close()  
 
 except Exception as e:
 	print(e) #this prints out the error if there is any
