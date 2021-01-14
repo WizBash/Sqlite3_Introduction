@@ -24,7 +24,12 @@ try:
 	c.execute("INSERT INTO info_table(NAME,AGE,SEX,JOB,SALARY,) VALUES (?,?,?,?,?,?,?,?)",('ivan','23','male','developer','540',))
 	c.commit()
 	db.close()
-		  
+	#=============================selecting data from our database table=====================
+	c.execute("SELECT * FORM info_table)
+	rows = c.fetchall()
+	for row in rows:
+		  print(row) #prints out data to the console
+	db.close()  
 
 
 except Exception as e:
