@@ -34,7 +34,14 @@ try:
 	c.execute("SELECT * FORM info_table WHERE name = 'ivan')
 	rows = c.fetchall()
 	for row in rows:
-		  print(row) #prints out data to the console
+		  print(row) #prints out data for ivan only to the console
+	db.close()  
+		  
+	#=============================another selection option data from our database table=====================
+	c.execute("SELECT SALARY FORM info_table WHERE name = 'ivan')
+	rows = c.fetchall()
+	for row in rows:
+		  print(row) #prints out salary of ivan to the console
 	db.close()  
 
 except Exception as e:
