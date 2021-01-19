@@ -43,6 +43,12 @@ try:
 	for row in rows:
 		  print(row) #prints out salary of ivan to the console
 	db.close()  
+#≠=≠=======
+	c.execute("SELECT SALARY FORM info_table WHERE name = 'ivan')
+	rows = c.fetchall()
+	for row in rows:
+		  print(row) #prints out salary of ivan to the console
+	db.close()  
 
 except Exception as e:
 	print(e) #this prints out the error if there is any
